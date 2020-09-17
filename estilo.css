@@ -1,0 +1,556 @@
+/*Resetando os valores de espaçamento */
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+   body{
+       background-image:url("_Imagens/b.png");
+       background-size:5%;
+       background-repeat:repeat;
+       background-color:#000;
+       color:#fff;
+    }
+   
+   /*Estilizando a nav da classe menu */
+    .menu {
+    width: 100%;
+    height: 50px;
+    background-color:rgba(0,0,0,.4);
+    font-family: Arial;
+    border-bottom:1px solid #e3007b;
+    }
+   
+   /*Estilizando as listas */
+    .menu ul {
+    list-style: none;
+    position: relative;
+    }
+   
+   .menu ul li {
+    width: 150px;
+    float: left;
+    }
+   
+   .menu a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+     background-color:rgba(0,0,0,.5);
+    color: #fff;
+    }
+   
+   .menu ul ul {
+    position: absolute;
+    visibility: hidden;
+    }
+   
+   .menu ul li:hover ul {
+    visibility: visible;
+    }
+   
+   .menu a:hover {
+    background-color: #f4f4f4;
+    color: #555;
+    }
+   
+   .menu ul ul li {
+    float: none;
+    border-bottom: solid 1px #ccc;
+    }
+   
+   .menu ul ul li a {
+    background-color: #e3007b;
+    }
+   
+   /*Criando o label */
+    label[for=”bt_menu”]{
+    padding: 5px;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    }
+   
+   #bt_menu {
+    display: none;
+    }
+    
+    label{
+        display:none;
+    }
+   
+   label[for=”bt_menu”]{
+    display: none;
+    }
+    
+    .LogoMarcaPc{
+       width:5.5%;
+       margin-left:88%; 
+    }
+    
+    .logoPc{
+       width:100%;
+       height:auto;
+       margin-top:-17%;
+       padding-left:23%;
+    }
+    
+     .marcaPc{
+       width:160%;
+       margin-top:-20%;
+       
+     }
+    
+    /*Estilizando a Section*/
+    section{
+       background-image:url("_Imagens/background.png");
+       background-repeat:no-repeat;
+       background-size:50%;
+       background-position-x:100%;
+       background-position-y:50px;
+       width:100%;
+       height:624px;
+    }
+     back{
+        
+    }
+    
+    .bemVindo article h1{
+        margin-top:20px;
+        margin-left:20px;
+        font-size:2.5em;
+    }
+    
+    .bemVindo article h2{
+        margin-top:20px;
+        margin-left:20px;
+        text-decoration:underline;
+        display:none;
+    }
+    
+    .pesquisar{
+       margin-top:20%; 
+       margin-left:2%;
+    }
+    
+    .pesquisar article.search input{
+        width:40%;
+        height:35px;
+        background-color:#fff;
+        border-radius:10px;
+        outline:none;
+        transition:all .8s;
+        cursor:pointer;
+        background-image:url("_Imagens/search.png");
+        background-repeat:no-repeat;
+        background-position-x:2%;
+        background-position-y:50%;
+        text-indent:30px;
+    }
+    
+    .pesquisar article.search input:hover{
+       background-color:#e3007b;
+       line-height:none; 
+    }
+    
+     .pesquisar article.digitar{
+       margin-top:5%;
+     }
+    
+    .pesquisar article.digitar input{
+       width:40%;
+       height:35px;
+       background-color:#fff;
+       outline:none;
+       border-top:none;
+       border-left:none;
+       border-right:none;
+       border-bottom:1px sold #000;
+       border-radius:10px;
+       transition:all .8s;
+       cursor:pointer;
+       text-indent:30px;
+    }
+    
+    .pesquisar article.digitar input:hover{
+       background-color:#e3007b;
+    }
+    
+    .pesquisar article.digitar p{
+       font-size:13px;
+       margin-bottom:-2.5%;
+       margin-left:.5%;
+       color:#000;
+       position:relative;
+       z-index:4;
+       color:#4c4a4a;
+       cursor:pointer;
+       width:21.5%;
+       font-family:arial;
+    }
+    
+    .pesquisar article.digitar p: paragraph{
+       background-color:green;
+        
+    }
+    
+    
+    /*Estilizando Aside*/
+    aside{
+       display:none;
+    }
+    
+    
+   /*-----------------------------------------------------------------------------*/
+   /*Deixando o Menu Responsivo */
+   @media(max-width: 800px) {
+   body{
+       background-image:none;
+   }
+   
+   .LogoMarcaPc{
+       display:none;
+   }
+   
+   label[for=”bt_menu”] {
+    display: block;
+    }
+    label{
+       display:block;
+       color:#fff;
+       font-size:35px;
+    }
+     
+   #bt_menu:checked ~ .menu{
+    margin-left: 0;
+    }
+     
+   .menu{
+    margin-top: 5px;
+    margin-left: -100%;
+    transition: all .4s;
+    position:relative;
+    background-color:rgba(0,0,0,.5);
+    z-index:10;
+    }
+    
+    .menu a{
+       background-color:rgba(0,0,0,.5);
+    }
+     
+   .menu ul li {
+    width: 100%;
+    float: none;
+    }
+     
+   .menu ul ul {
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 4s;
+    }
+     
+   .menu ul li:hover ul {
+    height: auto;
+    max-height: 200px;
+    }
+    
+    /*Estilizando Section*/
+    section{
+       display:none;
+    }
+    
+    
+    .LogPc{
+       width:30%;
+       margin-top:-29%;
+       margin-left:60%;
+       margin-bottom:1%;
+    }
+     
+    
+    .welcMobile{
+       display:block;
+       font-size:.8em;
+       text-shadow:1px 1px 2px  #e3007b;
+       text-align:center;
+       margin-top:-50px;
+       margin-bottom:10px;
+       background-color:#00b034;
+    }
+    
+    .welc{
+       margin-top:-50px; 
+       margin-right:18%;
+    }
+    
+    /*Estilizando aside*/
+    aside{
+       display:block;
+       width:90%;
+       margin:auto;
+       position:relative;
+       margin-top:15%;
+    }
+    aside article h1{
+       margin-top:-20px;
+       font-size:1.6em;
+       text-shadow:1px 1px 2px  #e3007b;
+       text-align:center;
+    }
+    aside .slides{
+       width:98%;
+       margin-top:5%;
+       border:5px solid #00b034;
+       margin:auto;
+       position:relative;
+       z-index:3;
+    }
+     aside .slides img{
+       width:100%;
+     }
+     
+     b{
+       display:block;
+       text-align:center;
+       font-size:18px;
+       color:#25d800;
+       margin-top:-7%;
+     }
+     
+     b span{
+       color:#1419cd; 
+       font-size:19px;
+     }
+     
+      .log{
+       margin-top:7%;
+       margin-bottom:12%;
+       position:relative;
+       z-index:4;
+     }
+   
+     .log img{
+       width:50%;
+       height:auto;
+       display:block;
+       margin:auto;
+     }
+     
+     .separador{
+       height:400px;
+       background-image:url("_Imagens/background.png");
+       background-size:100%;
+       background-position-x:100%;
+       position:fixed;
+       top:50%;
+       left:0px;
+       right:0px;
+       z-index:1;
+     }
+     
+     .separador img{
+       width:100%;
+       height:auto;
+     }
+     
+     .venda{
+       background-color:rgba(0,0,0,.6);
+       width:100%;
+       margin-left:-2%;
+       position:relative;
+       z-index:4;
+     }
+     .taxi img, .venda img, .aluguel img{
+       width:100%;
+     }
+     
+      .aluguel{
+       background-color:rgba(0,0,0,.8);
+       width:100%;
+       margin-left:-2%;
+       margin-top:2%;
+       position:relative;
+       z-index:4;
+     }
+     
+    .taxi h2, .aluguel h2, .venda h2{
+       text-align:center;  
+       background-color:#e3007b;
+       border-top:2px solid #fff;	
+       font-size:16px;
+    }
+    
+      .outro, .venda h3, .alugel h3, .taxi h3{
+       text-align:left;
+       font-size:13px;
+       color:#cecece;
+       margin-left:1%;
+     }
+    
+    h6{
+       font-weight:normal;
+       font-size:15px;
+       color:#888;
+       text-align:justify;
+    }
+    
+    .taxi{
+       background-color:rgba(0,0,0,.8);
+       border-radius:0px 10px 10px 0px;
+       width:100%;
+       margin:auto;
+       margin-top:2%;
+       position:relative;
+       z-index:4;
+    }
+    
+    figure{
+       overflow:hidden;
+       position:relative;
+       box-sizing:border-box;
+    }
+    
+    figcaption{
+       position:absolute;
+       background-color:rgba(0,0,0,.8);
+       width:100%;
+       height:100%;
+       box-sizing:border-box;
+       top:0px;
+       padding:15% 25%;
+       opacity:0;
+       transition:all .5s;
+       font-size:22px;
+       font-weight:bolder;
+       text-align:center;
+       text-transform:capitalize;
+       cursor:pointer;
+       text-variant:small-caps;
+       color:#fff;
+       font-size:14px;
+    }
+    figcaption:hover{
+       opacity:1;
+       border-bottom:1px solid #e3007b;
+       border-top:1px solid #e3007b;
+    }
+    
+    .saleTick{
+       background-color:#00b034;
+       margin:auto;
+       text-align:center;
+       margin-top:-1%;
+    }
+    .saleTick img.first{
+       width:30%; 
+    }
+    
+    .rentTick{
+       background-color:#888;
+    }
+    .rentTick img.firstRent{
+       width:48%; 
+    }
+    
+    .carros{
+       Margin:0% 0px 0% 0px;
+       background-color:#00b034;
+    }
+    
+     .carros2{
+       background-color:#1e31d4;
+       Margin:4% 0px 6% 0px;
+    }
+    
+    .carros3{
+       background-color:#888;
+    }
+    
+    .divCarros{
+       background:aqua;
+       padding:10% 0%;
+       border-radius:5%;
+       position:relative;
+    }
+    
+    /*Esse h3 é diferente*/
+    .divCarros h3{
+       cursor:pointer;
+       margin-top:-5px;
+       margin:auto;
+       display:block;
+       background-color:#000;
+       padding:.5% 1%;
+       font-size:12px;
+       width:98%;
+       text-align:center;
+    }
+    
+     .divCarros:hover h3{
+       opacity:0; 
+    }
+    
+    #ultimoTaxi{
+       border-radius:10px 10px 0px 0px; 
+    }
+    .foot{ 
+       background-position:center;
+       background-size:100%;
+       background-color:#fff;
+       position:relative;
+       z-index:5;
+       padding:10% 0%;
+       width:100%;
+       margin:auto;
+       color:#888;
+       
+    }
+    .foot li{
+       position:relative; 
+       list-style:none;
+    }
+    .foot i{
+       position:absolute; 
+       top:4px;
+       left:30px;
+       transition:all .5s;
+    }
+    .foot i:hover{
+       color:blue;
+       transform:scale(.9);
+    }
+    .foot img{
+       width:8%;
+       height:auto;
+    }
+    
+    .foot2{ 
+       background-color:#888;
+       position:relative;
+       z-index:5;
+       padding:;
+       width:100%;
+       margin:auto;
+       color:#888;
+       text-align:center;
+       
+    }
+    .foot2 img{
+       width:15%; 
+       transition:all .5s;
+    }
+    
+    .facebook{
+       margin-left:10%; 
+    }
+     .foot2 img:hover{
+       transform:scale(1.2);  
+     }
+    
+    }
